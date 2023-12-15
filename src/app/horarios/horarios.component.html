@@ -1,0 +1,14 @@
+
+
+<select name="cines" id="sltCines" class=" w-50 d-inline-block p-2">
+    <option value="default" selected hidden>Seleccione un Cine</option>
+    @for(cine of  Cines; track cine){
+        <option [value]="cine.Id">{{cine.Nombre| uppercase}}</option>
+    }
+</select>
+<select name="peliculas" id="sltPeliculas" class=" w-50 d-inline-block p-2">
+    @for(peli of  Peliculas; track peli){
+        <option [value]="peli"></option>
+    }
+</select>
+<button class="btn btn-light" >Confirmar película</button>

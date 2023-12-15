@@ -1,0 +1,20 @@
+ <h2 class="title">PELÍCULAS</h2>
+@if (pelicula != null) {
+    <section class="d-flex w-100 descripcion">
+        <app-horarios [peliculaSeleccionada]="pelicula"  class="w-50"/>
+        <app-pelicula [pelicula]="pelicula" class="w-50"/>
+        <button class="btn btn-danger h-100 m-3" (click)="pelicula = undefined">X</button>
+    </section>        
+}    
+<ul class="d-flex peliculas">
+    @for(peli of peliculas; track peli.Id){        
+        <li>
+            <article class="pelicula">
+                <img srcset={{peli.imagenUrl}} class="img-fluid" [alt]="peli.Nombre" (click)="MostrarPelicula(peli)" >
+                <h5 >{{peli.Nombre | uppercase}}</h5>
+            </article>
+        </li>
+    }@empty {
+        <li> Parece que hay un problema! </li>
+    }       
+</ul>   

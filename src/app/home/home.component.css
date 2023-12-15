@@ -1,0 +1,35 @@
+*{
+    color: azure;
+    background-color: black;
+    margin: 0;
+
+}
+
+.title{
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.peliculas{
+    gap:20px;
+    list-style: none;
+    flex-wrap: wrap;    
+}
+
+.pelicula{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 190px;
+}
+
+.pelicula img {
+    max-width: 100%; /* Ajusta la imagen al ancho máximo del contenedor */
+    height: auto;   /* Mantiene la proporción original de la imagen */
+    cursor: pointer;
+}
+
+.descripcion{
+    background-color: #212529;
+}

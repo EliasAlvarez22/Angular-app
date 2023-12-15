@@ -1,0 +1,17 @@
+
+
+*{
+    color: white;
+    background-color: black;
+
+}
+
+nav{
+     margin-bottom: 20px; 
+     padding: 0;
+}
+
+.nav-link:hover{
+    color: white !important;
+}
+

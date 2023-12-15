@@ -1,0 +1,20 @@
+<section class="d-flex ">
+  <article class="article-container p-3">
+    <img [src]="pelicula!.imagenUrl" [alt]="pelicula!.Nombre">
+    <h3>{{pelicula!.Nombre}}</h3>
+    <h6>Género: {{pelicula!.Genero}}</h6>
+    <h6>Director: {{pelicula?.Director}}</h6>
+    <h6>Duración: {{pelicula!.Duracion }} Minutos</h6>
+    @if(pelicula?.Actores){
+      <h6>Actores: 
+        @for(actor of pelicula?.Actores ;track actor; let last = $last ){
+          {{actor}}{{!last ? ',': ''}}            
+        }
+      </h6>
+    }
+</article>
+  <aside>
+    <p class="descripcion p-3">{{pelicula!.Descripcion}}</p>
+  </aside>
+
+</section>
